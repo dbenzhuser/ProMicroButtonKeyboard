@@ -53,9 +53,7 @@ Button buttons[] =
 int buttonCount = sizeof(buttons) / sizeof(Button);
 
 void setup() {
-  // open the serial port at 9600 bps:
-  //Serial.begin(9600);
-  
+ 
   // Set the buttons as an input and pull high
   for (int i = 0; i < buttonCount; i++)
   {
@@ -74,14 +72,12 @@ void loop() {
     if (!currentButton->Pressed && pinLow)
     {
       Keyboard.press(currentButton->Char);
-      //Serial.println(String("On:  " + String(currentButton->Char, HEX)));
       currentButton->Pressed = true;
       delay(50);
     }
     else if (currentButton->Pressed && !pinLow)
     {
       Keyboard.release(currentButton->Char);
-      //Serial.println(String("Off: " + String(currentButton->Char, HEX)));
       currentButton->Pressed = false;
       delay(50);
     }
