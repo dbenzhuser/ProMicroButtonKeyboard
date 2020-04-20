@@ -46,24 +46,30 @@ struct Button {
 // Input pins.
 Button buttons[] =
 {
-  {2, 'v', false},
-  {9, KEY_F10, false}
+  {2, 'a', false},
+  {3, 'b', false}
+  {4, KEY_UP_ARROW, false}
+  {5, KEY_DOWN_ARROW, false}
+  {6, KEY_LEFT_ARROW, false}
+  {7, KEY_RIGHT_ARROW, false}
+  {8, KEY_F1, false}
+  {9, KEY_F12, false}
 };
 
 int buttonCount = sizeof(buttons) / sizeof(Button);
 
 void setup() {
- 
+
   // Set the buttons as an input and pull high
   for (int i = 0; i < buttonCount; i++)
   {
     pinMode(buttons[i].Pin, INPUT_PULLUP);
   }
-  
+
   Keyboard.begin();
 }
 
-void loop() {  
+void loop() {
   for (int i = 0; i < buttonCount; i++)
   {
     Button* currentButton = &buttons[i];
