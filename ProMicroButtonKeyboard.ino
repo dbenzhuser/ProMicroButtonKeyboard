@@ -47,12 +47,12 @@ struct Button {
 Button buttons[] =
 {
   {2, 'a', false},
-  {3, 'b', false}
-  {4, KEY_UP_ARROW, false}
-  {5, KEY_DOWN_ARROW, false}
-  {6, KEY_LEFT_ARROW, false}
-  {7, KEY_RIGHT_ARROW, false}
-  {8, KEY_F1, false}
+  {3, 'b', false},
+  {4, KEY_UP_ARROW, false},
+  {5, KEY_DOWN_ARROW, false},
+  {6, KEY_LEFT_ARROW, false},
+  {7, KEY_RIGHT_ARROW, false},
+  {8, KEY_F1, false},
   {9, KEY_F12, false}
 };
 
